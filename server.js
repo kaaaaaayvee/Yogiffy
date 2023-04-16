@@ -4,13 +4,6 @@ const cors = require("cors");
 require("dotenv").config();
 const uri = process.env.MONGODB_URI;
 // connect to your MongoDB Atlas cluster
-mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 // create an Express app
 const app = express();
@@ -45,6 +38,14 @@ app.use(function (req, res, next) {
 
   next();
 });
+console.log(uri)
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 // Define a schema for the contact form data
 const contactSchema = new mongoose.Schema({
