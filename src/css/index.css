@@ -1,0 +1,722 @@
+/* ================================= 
+  WEB FONTS
+==================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+/* ================================= 
+  ELEMENT STYLES
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #576366;
+  background: #b1b8b3;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: #404040;
+  font-size: 1.6em;
+  margin-bottom: 1.25em;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #3b80d1;
+}
+hr {
+  border: 0;
+  height: 0;
+  margin: 2.3em 0 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+#home_banner{
+  width: 100%;
+  float: left;
+  height: auto;
+}
+.container:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.banner_section , .home_other_section{
+  float: left;
+  width: 100%;
+  position: relative;
+  
+}
+
+.home_other_section a ,p{
+  float: left;
+  width: 100%;
+}
+.banner_section a,p{
+  float: left;
+  width: 100%;
+}
+.info_section{
+  
+  width: 100%;
+  position: relative;
+}
+.yoga_programs {
+  margin-top: 60px;
+  font-weight: bold;
+  margin-left: 60px;
+  font-family:serif
+}
+.team_members{
+  margin-top: 60px;
+  font-weight: bold;
+  margin-left: 60px;
+  font-family:serif
+}
+.info_yoga{
+  background-color: #003A67;
+  padding: 2em;
+}
+.info_yoga li{
+  
+  width: 25%;
+  display: table-cell;
+  padding: 25px;
+}
+.info_yoga h2{
+  padding: 50px;
+  color: white;
+  text-align: center;
+
+}
+.info_yoga h3{
+  padding-top: 40px;
+  color: rgb(233, 233, 233);
+  text-align: center;
+}
+.info_yoga p{
+  color: rgb(233, 233, 233);
+  width: 100%;
+  text-align: center;
+}
+.info_yoga a{
+  color: rgb(233, 233, 233);
+  text-align: center;
+}
+.team_img {
+  width: 90%;
+  height: 350px;
+  border-radius: .3em;
+}
+.team_members  a,p{
+  width: 85%;
+
+  align-items: center;
+}
+#home_banner {
+  position: relative;
+  width: 100%;
+}
+#banner_title{
+  margin-top: -70px;
+  position: absolute;
+  width: 100%;
+}
+#banner_title {
+  width: 80%;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  top: 50%;
+  margin-left: 10%;
+  padding: 40px;
+  text-align: center;
+  font-size: 80px;
+  box-sizing: border-box;
+  color: #fff;
+  
+}
+
+.logo_title{
+  left: 0;
+  color: #3b80d1;
+  padding-bottom: 4px;
+}
+
+
+.scrollmenu {
+  background-color: #ffffff;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scrollmenu li {
+  display: inline-block;
+  color: rgb(44, 44, 44);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  width: 30%;
+  white-space: normal;
+  
+}
+.scrollmenu li p{
+margin: 20px;
+}
+.scrollmenu li a{
+  margin-top: 10px;
+  font-size : x-large;
+  font-weight: bold;
+  color: rgb(44, 44, 44);
+  transition: .2s;
+  }
+.scrollmenu ul:hover {
+  background-color: #777;
+}
+.scrollmenuitem{
+
+  display: flex;
+  width: 100%;
+}
+
+/* .scrollmenu li a {
+  font-size: .85em;
+  padding: .2em .8em;
+  border-radius: .25em;
+  background: #eaebeb;
+  
+} */
+.scrollmenu li a:hover,
+.scrollmenu li a.active {
+  color: #fff;
+  background: #39add1;
+}
+  /* .main_info{
+    float: left;
+    display: block ;
+  } */
+
+.numberCircle {
+    width: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid #666;
+    margin:auto;
+    margin-bottom: 15%;
+}
+.header_span{
+width: 50px;
+margin: 10px;
+}
+
+.center-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.primary-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #0062cc;
+}
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.tooltip-container:hover .tooltip {
+  display: block;
+}
+
+.tooltip-option {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+.tooltip-option:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* FORM & BUTTON STYLES -------- */
+
+.home a,
+input,
+button {
+  padding: .5em;
+  font-size: .9em;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  outline: none;
+}
+button {
+  color: white;
+  background: #4188dc;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+  border-color: rgba(0,0,0, .1);
+}
+
+/* ================================= 
+  LAYOUT & PAGE STYLES
+==================================== */
+
+.container {
+  width: 100%;
+  /* max-width: 780px; */
+  padding-bottom: 2em;
+  margin: 0 auto 2em;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0,0,0, .1);
+  overflow: hidden;
+}
+header {
+  background: #edeff0;
+  margin-bottom: 2em;
+}
+.main-content {
+  padding: 1em 2em;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.group li{
+  display: inline;
+}
+.course {
+  /* margin-bottom: 1em; */
+  width: 29%;
+  float: left;
+  margin:30px;
+  border: lightgrey outset;
+  height: 500px;
+}
+
+/* IMAGES -------- */
+
+.course-img {
+  width: 100%;
+}
+.teacher-img {
+  width: 100%;
+  height: 400px;
+  border-radius: .3em;
+}
+.not-found {
+  text-align: center;
+}
+
+/* MAIN NAV -------- */
+
+.main-nav a {
+  font-size: 18px;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 1em;
+  transition: .2s;
+}
+.main-nav a:hover,
+.main-nav .active {
+  color: #fff;
+  background: #3b80d1;
+}
+
+/* COURSE NAV -------- */
+
+.course-nav li {
+  display: inline-block;
+}
+.course-nav li + li {
+  margin-left: .6em;
+}
+.course-nav a {
+  font-size: .85em;
+  color: #7d7d7d;
+  padding: .2em .8em;
+  border-radius: .25em;
+  background: #eaebeb;
+  transition: .2s;
+}
+.course-nav a:hover,
+.course-nav a.active {
+  color: #fff;
+  background: #39add1;
+}
+
+/* ICONS -------- */
+
+.icn-logo {
+  /* background: #54606b; */
+  color: #fff;
+}
+.icn-logo i {
+  font-size: 2.45em;
+  line-height: 0;
+  margin-top: 5px;
+}
+.icn-error {
+  font-size: 3.2em;
+  margin-bottom: .25em;
+}
+
+
+/* 
+modifications
+*/
+
+
+/* YogaClass.css */
+.yoga-class-container {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.radio-container {
+  display: block;
+}
+
+.yoga-class-list {
+  list-style: none;
+  padding: 0;
+}
+
+.yoga-class-link {
+  text-decoration: none;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.yoga-class-item {
+  background-color: #fff;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.yoga-class-image {
+  margin-left: 20px;
+}
+
+
+/* 
+classes css
+*/
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+} */
+
+.title {
+  margin-bottom: 1.5rem;
+}
+
+.expertiseSelector {
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.exerciseList {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.exerciseListItem {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exerciseImage {
+  margin-right: 1rem;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add your existing CSS here */
+
+/* Tablet devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .yoga_programs,
+  .team_members {
+    margin-left: 30px;
+  }
+  
+  .info_yoga li {
+    width: 50%;
+    padding: 15px;
+  }
+  
+  .team_img {
+    height: 250px;
+  }
+
+  .numberCircle {
+    width: 80px;
+    line-height: 80px;
+    font-size: 20px;
+  }
+
+  #banner_title {
+    font-size: 50px;
+    padding: 20px;
+  }
+
+  .scrollmenu li {
+    width: 50%;
+  }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .yoga_programs,
+  .team_members {
+    margin-left: 15px;
+  }
+  
+  .info_yoga li {
+    display: block;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .team_img {
+    height: 200px;
+  }
+
+  .numberCircle {
+    width: 60px;
+    line-height: 60px;
+    font-size: 15px;
+  }
+
+  #banner_title {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .scrollmenu li {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* ================================= 
+  MEDIA QUERIES
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) { 
+  body {
+    padding-top: .8em;
+  }
+  .home a {
+    border-color: transparent;
+  }
+  
+   .icn-logo {
+     display: block;
+     width: 100%;
+     text-align: center;
+     padding-bottom: 4px;
+   }
+   .main-nav a {
+     border-top: 2px solid transparent;
+     border-bottom: 2px solid transparent;
+   }
+   .main-nav a:hover {
+     border-color: rgba(0,0,0, .1);
+   }
+   .courses h2 {
+     margin-bottom: 0;
+   }
+   .course-nav {
+     display: block;
+     margin: 1.5em 0 3.2em;
+   }
+   .home a,
+   input,
+   button {
+     display: block;
+     width: 100%;
+     margin-bottom: 1em;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) {
+  /* body {
+    padding-top: 3em;
+  } */
+  .home a {
+    border-color: #3b80d1;
+  }
+  .media img,
+  .media > div,
+  .teacher {
+    float: left;
+  }
+  .media > div {
+    width: 85.1%;
+    margin-left: 1.5em;
+  } 
+  .teacher {
+    width: 28.73%;
+    margin-bottom: 1.5em;
+
+    overflow: auto;
+  white-space: nowrap;
+  }
+  .teacher + .teacher {
+    margin-left: 2.54%;
+  
+  }
+  .teacher:nth-child(2n+9) {
+    clear: left;
+    margin-left: 0;
+  }
+
+  .teacher li{
+    display: inline-block;
+  }
+  /* MAIN NAV -------- */
+  .icn-logo {
+    margin-right: auto;
+    padding: 0 2em;
+  }
+  header,
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    padding: 1.25em 1.5em;
+  }
+  .main-nav a:hover {
+    border-color: rgba(0,0,0, .1);
+  }
+  /* COURSE NAV -------- */
+  .course-nav {
+    float: right;
+  } 
+  .courses h2 {
+    float: left;
+  }
+}
