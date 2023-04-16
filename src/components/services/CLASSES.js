@@ -36,7 +36,9 @@ const YogaClass = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:9000/api/yoga-classes"); // replace with your actual API endpoint
+        const response = await fetch(
+          "https://yogiffy.onrender.com/api/yoga-classes"
+        ); // replace with your actual API endpoint
         const data = await response.json();
         console.error("Data_is****", data.toString());
         console.error("Data_is****", data);
@@ -49,12 +51,11 @@ const YogaClass = () => {
     fetchData();
   }, []);
 
+  const selectedLevelClasses =
+    yogaClasses.length > 0 ? yogaClasses[0][selectedLevel] : [];
 
-  const selectedLevelClasses = yogaClasses.length > 0 ? yogaClasses[0][selectedLevel] : [];
-  
   const handleLevelChange = (e) => {
     setSelectedLevel(e.target.value);
-  
   };
 
   return (
@@ -109,7 +110,7 @@ const YogaClass = () => {
           <NavLink
             to={{
               pathname: "/classDetails",
-              search: "?id=" + yogaClass._id+"&level="+selectedLevel, 
+              search: "?id=" + yogaClass._id + "&level=" + selectedLevel,
               aboutProps: {
                 level: yogaClass.id,
                 className: yogaClass.title,

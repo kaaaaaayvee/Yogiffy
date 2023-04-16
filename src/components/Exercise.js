@@ -13,7 +13,7 @@ const YogaAsanas = () => {
   useEffect(() => {
     async function fetchYogaPrograms() {
       const response = await fetch(
-        "http://localhost:9000/api/yoga-challenge-details?id=" + id
+        "https://yogiffy.onrender.com/api/yoga-challenge-details?id=" + id
       ); // replace with your actual API endpoint
       const data = await response.json();
       setAsanas(data.exercises);
@@ -125,7 +125,7 @@ const YogaAsanas = () => {
               search: "?id=" + asana.id,
             }}
           >
-             {/* <img src={asana.img} alt="Sample image" /> */}
+            {/* <img src={asana.img} alt="Sample image" /> */}
             <img src={asana.img} alt={asana.name} style={imgStyle} />
             <div>
               <h3>{asana.name}</h3>

@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const uri =
-  "mongodb+srv://kaayvee:Canada@1029@cluster0.nidcwj5.mongodb.net/Yogiffy?retryWrites=true&w=majority";
+require("dotenv").config();
+const uri = process.env.MONGODB_URI;
 // connect to your MongoDB Atlas cluster
 mongoose
   .connect(uri, {
@@ -15,6 +15,7 @@ mongoose
 // create an Express app
 const app = express();
 app.use(express.json());
+app.use(cors());
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Add the CORS middleware
 app.use(
   cors({
-    origin: "http://localhost:3003", // Replace with your React app's origin
+    origin: "https://yogiffy.onrender.com", // Replace with your React app's origin
   })
 );
 
@@ -34,6 +35,10 @@ app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header(
+    "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers: Content-Type, Authorization"
   );
   next();
 });
@@ -176,7 +181,6 @@ app.get("/api/yoga-class-details", async (req, res) => {
   }
 });
 
-
 // define a route to fetch all yoga Challenges
 app.get("/api/yoga-challenges", async (req, res) => {
   const yogaChallenges = await YogaChallenges.find();
@@ -205,7 +209,7 @@ app.post("/api/contact-us", async (req, res) => {
     const contactData = req.body;
     console.log("$$$$$$$$$", contactData);
     const newContact = new Contact(contactData);
-   
+
     newContact
       .save()
       .then(() =>

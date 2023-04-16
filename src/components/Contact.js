@@ -19,7 +19,7 @@ const ContactForm = () => {
 
     if (validateForm()) {
       // Replace with your desired endpoint
-      const endpoint = "http://localhost:9000/api/contact-us";
+      const endpoint = "https://yogiffy.onrender.com/api/contact-us";
       try {
         const response = await fetch(endpoint, {
           method: "POST",
@@ -48,7 +48,7 @@ const ContactForm = () => {
 
   const validateForm = () => {
     let isValid = true;
-    let errors = { name: "", email: "", message: "" ,phone:""};
+    let errors = { name: "", email: "", message: "", phone: "" };
 
     if (!formData.name) {
       errors.name = "Name is required";
@@ -77,43 +77,41 @@ const ContactForm = () => {
     return isValid;
   };
 
+  const formStyle = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    width: "50%",
+    margin: "0 auto",
+    backgroundColor: "#f8f8f8",
+    padding: "20px",
+    borderRadius: "10px",
+  };
 
-const formStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  width: "50%",
-  margin: "0 auto",
-  backgroundColor: "#f8f8f8",
-  padding: "20px",
-  borderRadius: "10px",
-};
+  const inputStyle = {
+    marginBottom: "16px",
+    padding: "8px",
+    width: "100%",
+    border: "none",
+    borderBottom: "1px solid #ccc",
+    backgroundColor: "#fff",
+    borderRadius: "3px",
+  };
 
-const inputStyle = {
-  marginBottom: "16px",
-  padding: "8px",
-  width: "100%",
-  border: "none",
-  borderBottom: "1px solid #ccc",
-  backgroundColor: "#fff",
-  borderRadius: "3px",
-};
+  const errorStyle = {
+    color: "red",
+    fontSize: "12px",
+    marginBottom: "8px",
+  };
 
-const errorStyle = {
-  color: "red",
-  fontSize: "12px",
-  marginBottom: "8px",
-};
-
-const submitButtonStyle = {
-  padding: "8px 16px",
-  backgroundColor: "#008CBA",
-  color: "#fff",
-  border: "none",
-  borderRadius: "3px",
-  cursor: "pointer",
-};
-
+  const submitButtonStyle = {
+    padding: "8px 16px",
+    backgroundColor: "#008CBA",
+    color: "#fff",
+    border: "none",
+    borderRadius: "3px",
+    cursor: "pointer",
+  };
 
   // const formStyle = {
   //   display: "flex",
@@ -187,6 +185,5 @@ const submitButtonStyle = {
     </div>
   );
 };
-
 
 export default ContactForm;

@@ -10,8 +10,9 @@ const ExerciseList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:9000/api/yoga-class-details?_id=${id}&level=${level}`); // replace with your actual API endpoint
-        // const response = await fetch("http://localhost:9000/api/yoga-class-details?_id="+id); // replace with your actual API endpoint
+        const response = await fetch("https://yogiffy.onrender.com/api/yoga-class-details?_id="+id+"&level="+level
+        ); // replace with your actual API endpoint
+        // const response = await fetch("process.env.API_BASE_URL/api/yoga-class-details?_id="+id); // replace with your actual API endpoint
         const data = await response.json();
         console.error("Data_is****", data);
         setExercises(data);
@@ -28,7 +29,7 @@ const ExerciseList = () => {
     borderRadius: "5px",
     padding: "10px",
     backgroundColor: "#F5F5F5",
-    margin:"15px"
+    margin: "15px",
   };
 
   const itemStyles = {

@@ -8,7 +8,9 @@ const Aasan = () => {
 
   useEffect(() => {
     async function fetchYogaAasan() {
-      const response = await fetch("http://localhost:9000/api/yoga-asanas"); // replace with your actual API endpoint
+      const response = await fetch(
+        "https://yogiffy.onrender.com/api/yoga-asanas"
+      ); // replace with your actual API endpoint
       const data = await response.json();
       setYogaAsan(data);
     }

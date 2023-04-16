@@ -6,7 +6,9 @@ const Challenge = () => {
 
   useEffect(() => {
     async function fetchYogaChallenges() {
-      const response = await fetch("http://localhost:9000/api/yoga-challenges"); // replace with your actual API endpoint
+      const response = await fetch(
+        "https://yogiffy.onrender.com/api/yoga-challenges"
+      ); // replace with your actual API endpoint
       const data = await response.json();
       setYogaChallenge(data);
     }

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +10,7 @@ function AasanDetails(props) {
   useEffect(() => {
     async function fetchYogaChallenges() {
       const response = await fetch(
-        "http://localhost:9000/api/yoga-asanas-details?id=" + id
+        "https://yogiffy.onrender.com/api/yoga-asanas-details?id=" + id
       ); // replace with your actual API endpoint
       const data = await response.json();
       setYogaPoseDetail(data);
@@ -46,8 +45,8 @@ function AasanDetails(props) {
         <img style={imageStyle} src={yogaPoseDetail.img} alt="Image" />
       </div>
       <div style={textContainerStyle}>
-        <p>{yogaPoseDetail.description}
-        
+        <p>
+          {yogaPoseDetail.description}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
           ultrices arcu. Phasellus nec sapien nec diam sollicitudin rutrum.
           Maecenas ultrices elementum dui in molestie. Sed tincidunt euismod est

@@ -9,7 +9,7 @@ const ChallengeDetails = (props) => {
   useEffect(() => {
     async function fetchYogaChallenges() {
       const response = await fetch(
-        "http://localhost:9000/api/yoga-challenge-details?id=" + id
+        "https://yogiffy.onrender.com/api/yoga-challenge-details?id=" + id
       ); // replace with your actual API endpoint
       const data = await response.json();
       setYogaChallenges(data);
@@ -19,7 +19,7 @@ const ChallengeDetails = (props) => {
   return (
     <div className="center-align">
       <h1>{yogaChallenges.title}</h1>
-      <img src={yogaChallenges.img} alt="Sample image" height="600px"/>
+      <img src={yogaChallenges.img} alt="Sample image" height="600px" />
       <p>{yogaChallenges.description}</p>
       <NavLink
         to={{

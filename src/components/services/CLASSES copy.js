@@ -40,7 +40,9 @@ const YogaClass = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:9000/api/yoga-classes");
+        const response = await fetch(
+          "https://yogiffy.onrender.com/api/yoga-classes"
+        );
         const data = await response.json();
         setYogaClasses(data);
       } catch (error) {

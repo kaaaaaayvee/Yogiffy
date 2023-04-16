@@ -10,7 +10,7 @@ function Details(props) {
   useEffect(() => {
     async function fetchYogaChallenges() {
       const response = await fetch(
-        "http://localhost:9000/api/yoga-program-details?id=" + id
+        "https://yogiffy.onrender.com/api/yoga-program-details?id=" + id
       ); // replace with your actual API endpoint
       const data = await response.json();
       setYogaPoseDetail(data);
@@ -45,8 +45,8 @@ function Details(props) {
         <img style={imageStyle} src={yogaPoseDetail.img} alt="Image" />
       </div>
       <div style={textContainerStyle}>
-        <p>{yogaPoseDetail.description}
-        
+        <p>
+          {yogaPoseDetail.description}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
           ultrices arcu. Phasellus nec sapien nec diam sollicitudin rutrum.
           Maecenas ultrices elementum dui in molestie. Sed tincidunt euismod est
