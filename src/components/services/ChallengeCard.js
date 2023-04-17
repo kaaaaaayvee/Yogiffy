@@ -8,7 +8,7 @@ function ChallengeCard(props) {
   return (
     <li className="course media group">
       <div style={{ clear: "both" }}>
-        <img src={props.img} alt="course" width="350" />
+        <img src={props.img} alt="course" width="100%" height="100%" />
       </div>
       <div style={{ clear: "both" }}>
         <NavLink

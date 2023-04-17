@@ -334,8 +334,9 @@ header {
   width: 29%;
   float: left;
   margin:30px;
+  min-height: 600px;
   border: lightgrey outset;
-  height: 500px;
+  height: 700px;
 }
 
 /* IMAGES -------- */

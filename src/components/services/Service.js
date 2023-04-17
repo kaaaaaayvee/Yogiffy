@@ -8,7 +8,7 @@ function Service(props) {
   return (
     <li className="course media group" style={{ textAlign: "center" }}>
       <div style={{ clear: "both", float: "none" ,textAlign:"center"}}>
-        <img src={props.img} alt="course" width="80%"  textAlign="center"/>
+        <img src={props.img} alt="course" width="100%" height="100%" textAlign="center"/>
       </div>
       <div style={{ clear: "both" }}>
         {/* <img className="course-img" src={props.img} alt="course" /> */}
@@ -27,7 +27,7 @@ function Service(props) {
           </div>
         </NavLink>
       </div>
-    </li>
+    </li> 
   );
 }
 

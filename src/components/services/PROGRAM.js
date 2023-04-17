@@ -7,8 +7,8 @@ const Program = () => {
 
   useEffect(() => {
     async function fetchYogaChallenges() {
-      console.log(process.env.API_BASE_URL);
-      console.log("apiIRl", "${process.env.API_BASE_URL}/api/yoga-programs");
+      // console.log(process.env.API_BASE_URL);
+      // console.log("apiIRl", "${process.env.API_BASE_URL}/api/yoga-programs");
       const response = await fetch("https://yogiffy.onrender.com/api/yoga-programs"); // replace with your actual API endpoint
       const data = await response.json();
       console.error("Data_is****", data.toString());
